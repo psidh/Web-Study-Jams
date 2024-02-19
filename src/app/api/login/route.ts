@@ -1,7 +1,9 @@
-import supabase from "@/lib/supabase/server";
+import createSupabaseServerClient from "@/lib/supabase/server";
 import { NextResponse } from "next/server";
 
+
 export async function POST() {
+  const supabase = await createSupabaseServerClient();
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: "google",
     options: {
@@ -13,6 +15,7 @@ export async function POST() {
   });
 
   if (error) {
+    console.error(error);
     return new NextResponse(error.message, {status: 500});
   }
 
