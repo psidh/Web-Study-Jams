@@ -10,7 +10,7 @@ export default function page() {
     );
 
     supabase.auth.signInWithOAuth({
-      provider: "google",
+      provider: "github",
       options: {
         redirectTo: `${location.origin}/auth/callback`,
       },
