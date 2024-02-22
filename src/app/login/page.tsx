@@ -1,28 +1,45 @@
-"use client";
-import { createBrowserClient } from "@supabase/ssr";
-import React from "react";
+'use client';
+import { createBrowserClient } from '@supabase/ssr';
+import { SiGithub } from 'react-icons/si';
+import React from 'react';
 
-export default function page() {
+export default function LoginPage() {
+  // Function to initiate GitHub OAuth login
   async function login() {
     const supabase = createBrowserClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
     );
 
+    // Initiate GitHub OAuth sign-in
     supabase.auth.signInWithOAuth({
-      provider: "github",
+      provider: 'github',
       options: {
         redirectTo: `${location.origin}/auth/callback`,
       },
     });
   }
+
   return (
-    <div className="bg-black flex flex-col items-center justify-center h-screen">
+    <div className='flex flex-col items-center justify-center py-24 bg-gray-100 px-8'>
+      {/* GitHub Icon */}
+      <SiGithub className='w-32 h-32 text-gray-900' />
+
+      {/* Text Explanation */}
+      <div className='text-center mt-8'>
+        <h1 className='text-2xl font-bold text-gray-900 mb-4'>One-Step-Away</h1>
+        <p className='text-lg text-gray-800'>
+          Please sign in using your GitHub account to access the full features
+          of our application.
+        </p>
+      </div>
+
+      {/* Sign-in Button */}
       <button
-        className="rounded-full bg-teal-500 px-8 py-2 text-white"
+        className='mt-8 rounded-full bg-black px-8 py-2 text-white hover:bg-[#404040] focus:outline-none focus:bg-gray-700'
         onClick={login}
       >
-        Sign-in
+        Sign in with GitHub
       </button>
     </div>
   );
