@@ -1,6 +1,7 @@
 import React from 'react';
 import sessions from '@/data/data';
-import { RiVerifiedBadgeFill } from 'react-icons/ri';
+import { CiClock2 } from 'react-icons/ci';
+import { CiCalendar } from 'react-icons/ci';
 import Indicator from '@/components/Indicator';
 
 interface SessionProps {
@@ -32,17 +33,21 @@ const Session: React.FC<SessionProps> = ({
     <div
       className={`rounded-xl border overflow-hidden flex flex-row justify-between items-center ${bgColorClass}`}
     >
-      <div className='w-[40%]'>
+      <div className='w-[50%]'>
         <img
-          className='object-cover  md:h-1/2 md:w-28 p-2'
+          className='object-cover  md:h-2/3 md:w-28 p-2'
           src={image}
           alt={title}
         />
       </div>
       <div className='pl-2 flex flex-col items-start justify-start w-[60%] p-4'>
-        <div className='font-bold text-xl mb-2 py-1'>{title}</div>
-        <p className='text-gray-700 text-lg py-1'>{date}</p>
-        <p className='text-gray-700 text-lg pt-2'>{duration}</p>
+        <div className='font-semibold text-xl mb-1 py-1'>{title}</div>
+        <p className='text-gray-700 text-lg py-1 inline-flex items-center'>
+          <CiCalendar className='mr-2' /> {date}
+        </p>
+        <p className='text-gray-700 text-lg pt-1 inline-flex items-center'>
+          <CiClock2 className='mr-2' /> {duration}
+        </p>
       </div>
     </div>
   );

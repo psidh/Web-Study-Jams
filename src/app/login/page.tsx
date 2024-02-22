@@ -4,14 +4,12 @@ import { SiGithub } from 'react-icons/si';
 import React from 'react';
 
 export default function LoginPage() {
-  // Function to initiate GitHub OAuth login
   async function login() {
     const supabase = createBrowserClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
       process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
     );
 
-    // Initiate GitHub OAuth sign-in
     supabase.auth.signInWithOAuth({
       provider: 'github',
       options: {
@@ -22,10 +20,7 @@ export default function LoginPage() {
 
   return (
     <div className='flex flex-col items-center justify-center py-24 bg-gray-100 px-8'>
-      {/* GitHub Icon */}
       <SiGithub className='w-32 h-32 text-gray-900' />
-
-      {/* Text Explanation */}
       <div className='text-center mt-8'>
         <h1 className='text-2xl font-bold text-gray-900 mb-4'>One-Step-Away</h1>
         <p className='text-lg text-gray-800'>
@@ -33,8 +28,6 @@ export default function LoginPage() {
           of our application.
         </p>
       </div>
-
-      {/* Sign-in Button */}
       <button
         className='mt-8 rounded-full bg-black px-8 py-2 text-white hover:bg-[#404040] focus:outline-none focus:bg-gray-700'
         onClick={login}
