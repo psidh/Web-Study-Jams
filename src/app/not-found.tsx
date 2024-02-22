@@ -18,9 +18,9 @@ function NotFound() {
         Take Me Home
       </a>
       <div className='mt-8 text-center text-white text-opacity-60'>
-        <p>While you're here, enjoy this funny 404 page. 🎉</p>
+        <p>While you&#39;re here, enjoy this funny 404 page. 🎉</p>
         <p>
-          Here's a random fact: Bananas are berries, but strawberries aren't!
+          Here&#39;s a random fact: Bananas are berries, but strawberries aren&#39;t!
         </p>
       </div>
     </div>
