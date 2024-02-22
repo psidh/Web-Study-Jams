@@ -12,8 +12,8 @@ export default function ProjectsCard() {
         className='w-full aspect-video rounded-xl '
         scrolling='false'
       />
-      <h1 className='text-2xl my-2 '>Monica Goud</h1>
-      <h2 className='text-lg my-2 font-semibold'>Startup Coach</h2>
+      <p className='text-2xl my-2'>Monica Goud</p>
+      <p className='text-lg my-2 font-semibold'>Startup Coach</p>
       <p className='text-[#888888] text-justify'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
         obcaecati? Magni adipisci accusamus alias blanditiis, veniam reiciendis

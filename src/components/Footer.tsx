@@ -22,7 +22,7 @@ export default function Footer() {
         </p>
       </div>
       <div className='md:col-span-4 '>
-        <h1>Social</h1>
+        <p>Social</p>
         <div className='flex items-start justify-start'>
           <RiTwitterXLine />
           <RiInstagramLine />
