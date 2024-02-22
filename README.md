@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Web Study Jams - Gitam VSKP
 
-## Getting Started
+## Introduction
 
-First, run the development server:
+Web Study Jams is an initiative by Gitam University, Visakhapatnam (VSKP), aimed at providing students with a platform to enhance their web development skills. This initiative focuses on practical learning, projects, and resources to empower students in the field of web development.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Website Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The Web Study Jams website serves as a central hub for students participating in the program. It offers various features and resources to facilitate learning and skill development in web development.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Key Features:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **Project Showcase**: The website hosts a showcase of projects created by students during the study jams. It serves as inspiration and demonstrates the practical application of web development concepts.
 
-## Learn More
+2. **Resource Library**: A comprehensive library of resources is available for students, including presentations (PPTs), tutorials, articles, and reference materials. These resources cover a wide range of topics relevant to web development, from basic HTML/CSS to advanced JavaScript frameworks.
 
-To learn more about Next.js, take a look at the following resources:
+3. **Event Announcements**: The website keeps students informed about upcoming events, workshops, and study sessions related to web development. Students can register for these events directly through the website.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Community Engagement**: Web Study Jams fosters a sense of community among students interested in web development. The website includes discussion forums, chat rooms, and collaborative project opportunities to encourage interaction and collaboration among participants.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Projects Showcase
 
-## Deploy on Vercel
+### 1. Project Title 1
+- **Description**: Brief description of the project, its objectives, and features.
+- **Technologies Used**: HTML, CSS, JavaScript, etc.
+- **GitHub Repository Link**: [Project Repository](#)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 2. Project Title 2
+- **Description**: Brief description of the project, its objectives, and features.
+- **Technologies Used**: HTML, CSS, JavaScript, etc.
+- **GitHub Repository Link**: [Project Repository](#)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Resources
+
+### 1. Presentation Slides (PPTs)
+
+- **Introduction to HTML and CSS**
+  - [Download PPT](#)
+- **JavaScript Fundamentals**
+  - [Download PPT](#)
+- **Responsive Web Design**
+  - [Download PPT](#)
+
+### 2. Tutorials and Articles
+
+- **Getting Started with HTML and CSS**
+  - [Tutorial Link](#)
+- **Building Interactive Web Applications with JavaScript**
+  - [Tutorial Link](#)
+- **Mastering CSS Grid Layout**
+  - [Tutorial Link](#)
+
+## Conclusion
+
+Web Study Jams at Gitam VSKP is a valuable initiative for students passionate about web development. Through its website, students gain access to educational resources, project opportunities, and a supportive community that empowers them to grow and excel in the field of web development. Join us in our journey to explore the limitless possibilities of the web!
