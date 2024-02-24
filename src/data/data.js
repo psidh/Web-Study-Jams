@@ -17,7 +17,7 @@ const sessions = [
   },
   {
     number: 3,
-    date: '22 Feb',
+    date: '28 Feb',
     title: 'CSS Styling',
     type: 'Hybrid (Online & Offline)',
     duration: '4 PM',
@@ -25,7 +25,7 @@ const sessions = [
   },
   {
     number: 4,
-    date: '23 Feb',
+    date: '29 Feb',
     title: 'Tailwind CSS',
     type: 'Hybrid (Online & Offline)',
     duration: '3 PM',
@@ -33,7 +33,7 @@ const sessions = [
   },
   {
     number: 5,
-    date: '29 Feb',
+    date: '6 March',
     title: 'JavaScript',
     type: 'Hybrid (Online & Offline)',
     duration: '4 PM',
@@ -41,7 +41,7 @@ const sessions = [
   },
   {
     number: 6,
-    date: '01 Mar',
+    date: '7 March',
     title: 'Project 1',
     type: 'Hybrid (Online & Offline)',
     duration: '3 PM',
@@ -49,7 +49,7 @@ const sessions = [
   },
   {
     number: 7,
-    date: '07 Mar',
+    date: '13 March',
     title: 'React',
     type: 'Hybrid (Online & Offline)',
     duration: '4 PM',
@@ -57,7 +57,7 @@ const sessions = [
   },
   {
     number: 8,
-    date: '08 Mar',
+    date: '14 March',
     title: 'Project 2',
     type: 'Hybrid (Online & Offline)',
     duration: '3 PM',
@@ -65,7 +65,7 @@ const sessions = [
   },
   {
     number: 9,
-    date: '14 Mar',
+    date: '20 March',
     title: 'NextJS',
     type: 'Hybrid (Online & Offline)',
     duration: '4 PM',
