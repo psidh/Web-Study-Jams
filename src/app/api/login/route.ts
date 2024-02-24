@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 export async function POST() {
   const supabase = await createSupabaseServerClient();
   const { data, error } = await supabase.auth.signInWithOAuth({
-    provider: "google",
+    provider: "github",
     options: {
       queryParams: {
         access_type: "offline",
