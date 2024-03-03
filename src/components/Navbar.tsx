@@ -10,8 +10,14 @@ function Navbar() {
     );
 
     const { error } = await supabase.auth.signOut()
+    if (error) {
+      console.error(error);
+      return;
+    }
+    console.log("Logged out")
 
   }
+
   return (
     <div>
       <div className='flex justify-between items-center md:px-32 px-6 py-6  border-b border-[#d3d3d3] shadow'>

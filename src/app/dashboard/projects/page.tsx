@@ -1,4 +1,5 @@
 'use client';
+import { createClient } from '@/utils/supabase/client';
 import { createBrowserClient } from '@supabase/ssr';
 import React, { useState, ChangeEvent } from 'react';
 
