@@ -1,5 +1,6 @@
 'use client'
 import { createBrowserClient } from '@supabase/ssr';
+import { FaUser } from "react-icons/fa";
 
 function Navbar() {
   async function signOut() {
@@ -20,9 +21,12 @@ function Navbar() {
         <h1 className='sm:text-2xl font-semibold text-[#656c73]'>
           Web Study Jams
         </h1>
-        <button onClick={signOut} className='sm:text-2xl font-semibold text-[#656c73]'>
+        <button title='user' onClick={signOut} className='sm:text-2xl font-semibold text-[#656c73]'>
           SignOut
         </button>
+        <a href="/dashboard
+        "><FaUser   />
+        </a>
       </div>
     </div>
   );
