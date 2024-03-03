@@ -14,7 +14,7 @@ export default function LoginPage() {
       provider: 'github',
       options: {
         // redirectTo: `${location.origin}/auth/callback`,
-        redirectTo: `/auth/callback`,
+        redirectTo: `http://localhost:3000/auth/callback`,
       },
     });
   }

@@ -1,19 +1,28 @@
-import createSupabaseServerClient from "@/lib/supabase/server";
+import { createServerClient, type CookieOptions } from "@supabase/ssr";
+import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
-  const supabase = await createSupabaseServerClient();
+  const cookieStore = cookies();
 
-  const token =
-    req.cookies.get("sb-obvikgxvqmnecgbrwfav-auth-token-code-verifier") || "";
-  if (token) {
-    await supabase.auth.setSession({
-      access_token: token,
-    });
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        get(name: string) {
+          return cookieStore.get(name)?.value;
+        },
+        set(name: string, value: string, options: CookieOptions) {
+          cookieStore.set({ name, value, ...options });
+        },
+        remove(name: string, options: CookieOptions) {
+          cookieStore.set({ name, value: "", ...options });
+        },
+      },
+    },
+  );
 
-    const user = await supabase.auth.getUser();
-    console.log(user);
-  }
   const data = await req.json();
   const { title, description, link } = data;
 
