@@ -25,7 +25,6 @@ export async function POST(req: NextRequest) {
 
   const data = await req.json();
   const { title, description, link } = data;
-
   const { error } = await supabase.from("projects").insert({
     title: title,
     description: description,
