@@ -12,7 +12,7 @@ export default function Indicator() {
           <div className='w-24 bg-blue-200 border border-blue-400 rounded-full mb-2 text-blue-200 py-1 px-6'>
             flex
           </div>
-          <p>Upcoming Sessions</p>
+          <p>Upcoming Session</p>
         </div>
       </div>
     </div>

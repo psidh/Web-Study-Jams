@@ -28,7 +28,7 @@ export default function Page() {
           </div>
         </a>
         <a
-          href='/vote'
+          href='/dashboard/vote'
           className='dashboard-links border hover:border-blue-500 hover:bg-blue-200 bg-blue-500 text-white hover:text-black'
         >
           <div className='flex flex-col items-center justify-center'>
