@@ -23,9 +23,11 @@ export async function POST() {
         access_type: "offline",
         prompt: "consent",
       },
-      redirectTo : getURL(),
+      redirectTo : "http://localhost:3000",
     },
   });
+
+  console.log(data);
 
   if (error) {
     console.error(error);
