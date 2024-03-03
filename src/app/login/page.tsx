@@ -1,20 +1,18 @@
 'use client';
-import { createBrowserClient } from '@supabase/ssr';
 import { SiGithub } from 'react-icons/si';
 import React from 'react';
+import { createClient } from '@/utils/supabase/client';
+import { BASE_URL } from '@/utils/utils';
 
 export default function LoginPage() {
   async function login() {
-    const supabase = createBrowserClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-    );
+    const supabase = createClient();
 
     supabase.auth.signInWithOAuth({
       provider: 'github',
       options: {
         // redirectTo: `${location.origin}/auth/callback`,
-        redirectTo: `http://localhost:3000/auth/callback`,
+        redirectTo: `${BASE_URL}/auth/callback`,
       },
     });
   }

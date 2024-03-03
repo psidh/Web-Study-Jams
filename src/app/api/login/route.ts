@@ -1,4 +1,5 @@
 import createSupabaseServerClient from "@/lib/supabase/server";
+import { BASE_URL } from "@/utils/utils";
 import { NextResponse } from "next/server";
 
 
@@ -23,7 +24,7 @@ export async function POST() {
         access_type: "offline",
         prompt: "consent",
       },
-      redirectTo : "http://localhost:3000",
+      redirectTo : BASE_URL,
     },
   });
 
