@@ -1,11 +1,43 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent } from 'react';
 
-export default function Page() {
-  const [selectedWeek, setSelectedWeek] = useState('');
+interface FormData {
+  title: string;
+  description: string;
+  link: string;
+}
 
-  const handleWeekChange = (event: any) => {
-    setSelectedWeek(event.target.value);
+const Page: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
+    title: '',
+    description: '',
+    link: '',
+  });
+
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async () => {
+    try {
+      const response = await fetch('_______________api-endpoint_________', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      console.log('Response:', response);
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
 
   return (
@@ -15,26 +47,37 @@ export default function Page() {
       </h1>
       <input
         type='text'
-        title='title'
+        name='title'
+        value={formData.title}
+        onChange={handleChange}
         placeholder='Title'
         className='py-2 w-full border border-[#aaaaaa] rounded-md pl-4 my-4 focus:outline-none'
       />
       <textarea
         rows={3}
         cols={2}
-        title='description'
+        name='description'
+        value={formData.description}
+        onChange={handleChange}
         placeholder='Description'
         className='py-2 w-full border border-[#aaaaaa] rounded-lg pl-4 my-4  focus:outline-none'
       />
       <input
         type='text'
-        title='link'
-        placeholder='Github Link'
+        name='link'
+        value={formData.link}
+        onChange={handleChange}
+        placeholder='Github Link/ Deployment Link'
         className='py-2 w-full border border-[#aaaaaa] rounded-md pl-4 my-4 focus:outline-none'
       />
-      <button className='w-full mt-4 py-2 text-center bg-blue-600 hover:bg-black text-white transition-all duration-300 rounded-lg'>
+      <button
+        onClick={handleSubmit}
+        className='w-full mt-4 py-2 text-center bg-blue-600 hover:bg-black text-white transition-all duration-300 rounded-lg'
+      >
         Submit
       </button>
     </div>
   );
-}
+};
+
+export default Page;
