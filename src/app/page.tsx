@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <div>
       <Intro />
+      <JoinButton />
       <Schedule />
       <Projects />
-      <JoinButton />
     </div>
   );
 }

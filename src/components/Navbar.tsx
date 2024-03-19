@@ -1,6 +1,6 @@
-'use client'
+'use client';
 import { createBrowserClient } from '@supabase/ssr';
-import { FaUser } from "react-icons/fa";
+import { FaUser } from 'react-icons/fa';
 
 function Navbar() {
   async function signOut() {
@@ -9,13 +9,12 @@ function Navbar() {
       process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
     );
 
-    const { error } = await supabase.auth.signOut()
+    const { error } = await supabase.auth.signOut();
     if (error) {
       console.error(error);
       return;
     }
-    console.log("Logged out")
-
+    console.log('Logged out');
   }
 
   return (
@@ -27,12 +26,6 @@ function Navbar() {
         <h1 className='sm:text-2xl font-semibold text-[#656c73]'>
           Web Study Jams
         </h1>
-        <button title='user' onClick={signOut} className='sm:text-2xl font-semibold text-[#656c73]'>
-          SignOut
-        </button>
-        <a href="/dashboard
-        "><FaUser   />
-        </a>
       </div>
     </div>
   );

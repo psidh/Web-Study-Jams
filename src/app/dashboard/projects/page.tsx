@@ -1,5 +1,7 @@
 'use client';
 import { createClient } from '@/utils/supabase/client';
+import toast from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import { createBrowserClient } from '@supabase/ssr';
 import React, { useState, ChangeEvent } from 'react';
 
@@ -26,7 +28,7 @@ const Page: React.FC = () => {
       process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
     );
     const { name, value } = e.target;
-    const { data, error } = await supabase.auth.getSession()
+    const { data, error } = await supabase.auth.getSession();
     console.log(data);
     setFormData({
       ...formData,
@@ -45,6 +47,13 @@ const Page: React.FC = () => {
       });
 
       console.log('Response:', response);
+      toast.success('Project has been submitted successfully');
+      setFormData({
+        title: '',
+        description: '',
+        link: '',
+        id: '',
+      });
     } catch (error) {
       console.error('Error:', error);
     }
@@ -52,6 +61,13 @@ const Page: React.FC = () => {
 
   return (
     <div className='flex-col justify-between items-center md:px-32 px-6 py-6 h-screen border-b border-[#d3d3d3] shadow'>
+      <Toaster />
+      <a
+        href='/dashboard'
+        className='py-2 px-8 rounded-lg bg-blue-500 text-white'
+      >
+        Dashboard
+      </a>
       <h1 className='text-2xl text-[#3a3b3f] sm:text-4xl my-8 font-semibold'>
         Project Submission
       </h1>
