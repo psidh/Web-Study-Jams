@@ -10,7 +10,7 @@ export default function Page() {
       </h1>
       <div className='grid grid-cols-2'>
         <a
-          href='/explore'
+          href='/dashboard'
           className='dashboard-links border hover:border-red-500 hover:bg-red-200 bg-red-500 text-white hover:text-black'
         >
           <div className='flex flex-col items-center justify-center'>
@@ -28,7 +28,7 @@ export default function Page() {
           </div>
         </a>
         <a
-          href='/dashboard/vote'
+          href='/dashboard'
           className='dashboard-links border hover:border-blue-500 hover:bg-blue-200 bg-blue-500 text-white hover:text-black'
         >
           <div className='flex flex-col items-center justify-center'>
@@ -37,7 +37,7 @@ export default function Page() {
           </div>
         </a>
         <a
-          href='/dashboard/personalize'
+          href='/dashboard'
           className='dashboard-links border hover:border-yellow-500 hover:bg-yellow-200 bg-yellow-500 text-white hover:text-black'
         >
           <div className='flex flex-col items-center justify-center'>
