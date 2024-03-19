@@ -25,6 +25,9 @@ export const metadata: Metadata = {
     'MongoDB',
   ],
   category: '6 weeks',
+  openGraph :{images :[
+    '/logos/gdsc-logo.png'
+  ]}
 
   // Add more metadata here if needed
 };
