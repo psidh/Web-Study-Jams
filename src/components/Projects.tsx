@@ -6,12 +6,7 @@ export default function Projects() {
       <h1 className='text-3xl my-16 text-[#292c39] sm:text-5xl  font-semibold'>
         Projects Showcase
       </h1>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 my-8'>
-        <ProjectsCard />
-        <ProjectsCard />
-        <ProjectsCard />
-        <ProjectsCard />
-      </div>
+      <ProjectsCard />
     </section>
   );
 }

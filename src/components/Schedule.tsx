@@ -23,9 +23,9 @@ const Session: React.FC<SessionProps> = ({
 }) => {
   let bgColorClass = '';
 
-  if (number === 1 || number === 2) {
+  if (number > 0 && number < 9) {
     bgColorClass = 'bg-green-100 border-green-500';
-  } else if (number === 3) {
+  } else if (number === 9 || number === 10) {
     bgColorClass = 'bg-blue-100 border-blue-500';
   }
 
